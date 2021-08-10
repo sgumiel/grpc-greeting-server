@@ -1,3 +1,20 @@
 grpc:
   server:
     port: 8080
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        default_schema: greeting
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://localhost:31301/greetingdb
+    username: greeting_user
+    password: greeting_pass
+    driverClassName: org.postgresql.Driver
+
+greeting:
+  pattern: Hello %s! My favourite city is %s

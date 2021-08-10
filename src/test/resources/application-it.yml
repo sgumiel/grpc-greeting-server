@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+grpc:
+  server:
+    port: -1
+    inProcessName: test
+  client:
+    greetingService:
+      address: in-process:test
+
+greeting:
+  pattern: message-%s-%s
